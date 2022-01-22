@@ -7,8 +7,8 @@ class Url < ApplicationRecord
     rand(36**8).to_s(36)
   end
   def sanitize
-    long_url.strip!
-    sanitize_url = self.long_url.downcase.gsub(/(https?:\/\/)|(www\.)/,"")
+    long_url.strip! #remove spaces
+    sanitize_url = self.long_url.downcase.gsub(/(https?:\/\/)|(www\.)/,"") #create a unified smallcase format
     "http://#{sanitize_url}"
   end
 end
