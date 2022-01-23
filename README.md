@@ -2,7 +2,7 @@
 `bundle install`
 `rails serve`
 *Make sure selenium is running to avoid sanitize error*  
-* ...
+
 a) How you would generate a unique ID for each URL
 For each url I used a formula **rand(36*8).to_s(36)** to generate a unique key to associate with the long url  
 
